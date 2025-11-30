@@ -1,0 +1,50 @@
+# Get editor completions based on the config schema
+# "$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+scan_timeout = 100
+
+format = """$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$newline\
+($nix_shell$container$fill$git_metrics\n)\
+$hostname\
+$localip\
+$shlvl\
+$shell\
+$env_var\
+$jobs\
+$sudo\
+$username\
+$character"""
+
+right_format = '[$all](dimmed)'
+
+[fill]
+symbol = " "
+
+[character]
+success_symbol = '[➜](bold white)'
+error_symbol = '[➜](bold white)'
+
+[directory]
+truncate_to_repo = false
+
+[git_branch]
+always_show_remote = true
+format = '[on [$symbol$remote_name/$branch]($style)](dimmed) '
+style = "bold purple dimmed"
+
+[git_commit]
+style = "bold green dimmed"
+
+[nodejs]
+format = '\[[$symbol$version]($style)\] '
+style = "bold green dimmed"
+
+[python]
+format = '\[[$symbol$version]($style)\] '
+style = "bold yellow dimmed"
