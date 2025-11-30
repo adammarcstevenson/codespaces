@@ -19,11 +19,10 @@ print_success "Packages updated"
 # Install Starship
 print_info "Installing Starship"
 apt install starship
-print_success "Startship installed"
+print_success "Starship installed"
 
 # Create symlinks to key config files
 print_info "Symlinking config files"
-mkdir .config
-ln -svf ~/Projects/local-config/config-files/.zshrc ~/.zshrc
-ln -svf ~/Projects/local-config/config-files/starship.toml ~/.config/starship.toml
+ln -svf .zshrc ~/.zshrc
+ln -svf starship.toml ~/.config/starship.toml
 print_success "Symlinked config files"
