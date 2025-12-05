@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 
 # Print functions
 function print_error {
