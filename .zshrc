@@ -8,6 +8,3 @@ alias reload='source ~/.zshrc'
 
 # Set CotEditor as the default editor
 export EDITOR="code --wait"
-
-# Load Starship prompt
-eval "$(starship init zsh)"
